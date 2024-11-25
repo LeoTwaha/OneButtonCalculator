@@ -1,0 +1,708 @@
+body{
+    background-color: black;
+    display: grid;
+    place-items: center;
+    
+}
+#bpp{
+    perspective: 120px; 
+}
+ 
+
+p{
+    font-family: "Roboto", sans-serif;
+}
+
+
+#spp{
+    perspective: 120px;  
+}
+#screenPanel{
+    transform: rotateX(4deg);
+    position: absolute;
+    width: 253px;
+    height: 100px;
+    top: -330px;
+    left: -127px;
+    background-color: rgb(238, 238, 248);
+    z-index: -1;
+    border-radius: 3%;
+}
+
+#screen{
+    position: absolute;
+    width: 230px;
+    height: 60px;
+    top:8px;
+    left:4px;
+    background-color: grey;  
+    z-index: -1;
+}
+#bezel{
+    position: absolute;
+    width: 240px;
+    height: 75px;
+    top:10px;
+    left:5px;
+    border: 2px solid;  
+    z-index: 1;
+}
+#bigPanel {
+    margin-top: 100px;
+    width: 300px;
+    height: 300px;
+    background-color: ghostwhite;
+    transform: rotateX(10deg);
+    border-radius: 3%;
+    z-index: 1;
+    position: relative; /* Needed for positioning children */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  /* Add perspective to the container */
+}
+
+#numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(5, 50px);
+    gap: 10px; /* Space between buttons */
+    transform-style: preserve-3d; /* Enable 3D transforms for children */
+    transform: rotateX(25deg); /* Rotate to match the panel's 3D effect */
+    
+}
+
+.number {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 90, 90);
+    border-radius: 50%;
+    transform: rotateX(100deg); 
+}
+
+#bottomPanel{
+    transform: rotateX(-10deg);
+    position: absolute;
+    width: 360px;
+    height: 50px;
+    background-color: gray;
+    top: 440px;
+    left: -30px;
+    border-radius: 3%;
+    z-index: 1;
+}
+#bp{
+    position: relative;
+    bottom: 240px;
+    
+}
+
+.plus{
+    background-color: rgb(94, 93, 116);
+    margin-left: 60px;
+    padding: 5px;
+}
+.equals{
+    margin-left: 30px;
+    padding: 5px;
+}
+.decimal{
+    margin-left: -20px;
+    padding: 5px;
+}
+.zero{
+    margin-left: -60px;
+    padding: 5px;
+}
+.minus{
+    background-color: rgb(94, 93, 116);
+    margin-left: 50px;
+    padding: 4px;
+}
+.three{
+    margin-left: 25px;
+    padding: 4px;
+}
+.two{
+    margin-left: -15px;
+    padding: 4px;
+}
+.one{
+    margin-left: -50px;
+    padding: 4px;
+}
+.mult{
+    background-color: rgb(94, 93, 116);
+    margin-left: 40px;
+    padding: 3px;
+}
+.six{
+    margin-left: 20px;
+    padding: 3px;
+}
+.five{
+    margin-left: -10px;
+    padding: 3px;
+}
+.four{
+    margin-left: -35px;
+    padding: 3px;
+}
+.divde{
+    background-color: rgb(94, 93, 116);
+    margin-left: 30px;
+    padding: 2px;
+}
+.nine{
+    margin-left: 15px;
+    padding: 2px;
+}
+.eight{
+    margin-left: -5px;
+    padding: 2px;
+}
+.seven{
+    margin-left: -25px;
+    padding: 2px;
+}
+.C{
+    margin-left: 20px;
+    background-color: rgb(123, 97, 97);
+}
+.percent{
+    margin-left: 10px;
+    background-color: lightgray;
+}
+
+.right{
+    background-color: lightgray;
+}
+.left{
+    margin-left: -15px;
+    background-color: lightgray;
+}
+
+#left3d{
+    position: absolute;
+    background-color: darkgray;
+    width: 39px;
+    height: 20px;
+    clip-path: ellipse(55% 80% at top);
+
+    top: 35px;
+    left: -15px;
+}
+#right3d{
+    position: absolute;
+    background-color: darkgray;
+    width: 39px;
+    height: 20px;
+    clip-path: ellipse(55% 80% at top);
+
+    top: 35px;
+    left: 60.2px;
+}
+#percent3d{
+    position: absolute;
+    background-color: darkgray;
+    width: 39px;
+    height: 20px;
+    clip-path: ellipse(55% 80% at top);
+
+    top: 35px;
+    left: 130.6px;
+}
+#c3d{
+    position: absolute;
+    background-color: rgb(80, 54, 54);
+    width: 39px;
+    height: 20px;
+    clip-path: ellipse(55% 80% at top);
+
+    top: 35px;
+    left: 200.3px;
+}
+#seven3d{
+    position: absolute;
+    background-color: rgb(225, 24, 24);
+    width: 44px;
+    height: 20px;
+    clip-path: ellipse(56% 80% at top);
+
+    top: 91px;
+    left: -25px;
+}
+#eight3d{
+    position: absolute;
+    background-color: rgb(225, 24, 24);
+    width: 44px;
+    height: 20px;
+    clip-path: ellipse(56% 80% at top);
+
+    top: 91px;
+    left: 55px;
+}
+#nine3d{
+    position: absolute;
+    background-color: rgb(225, 24, 24);
+    width: 44px;
+    height: 20px;
+    clip-path: ellipse(56% 80% at top);
+
+    top: 91px;
+    left: 135.2px;
+}
+#divde3d{
+    position: absolute;
+    background-color: rgb(65, 64, 81);
+    width: 44px;
+    height: 20px;
+    clip-path: ellipse(56% 80% at top);
+
+    top: 91px;
+    left: 210.2px;
+}
+#four3d{
+    position: absolute;
+    background-color: rgb(225, 24, 24);
+    width: 45px;
+    height: 20px;
+    clip-path: ellipse(56% 80% at top);
+
+    top: 147px;
+    left: -34px;
+}
+#five3d{
+    position: absolute;
+    background-color: rgb(225, 24, 24);
+    width: 45px;
+    height: 20px;
+    clip-path: ellipse(56% 80% at top);
+
+    top: 147px;
+    left: 50.6px;
+}
+#six3d{
+    position: absolute;
+    background-color: rgb(225, 24, 24);
+    width: 45px;
+    height: 20px;
+    clip-path: ellipse(56% 80% at top);
+
+    top: 147px;
+    left: 141px;
+}
+#mult3d{
+    position: absolute;
+    background-color: rgb(65, 64, 81);
+    width: 45px;
+    height: 20px;
+    clip-path: ellipse(56% 80% at top);
+
+    top: 147px;
+    left: 221px;
+}
+#one3d{
+    position: absolute;
+    background-color: rgb(225, 24, 24);
+    width: 46px;
+    height: 20px;
+    clip-path: ellipse(56% 80% at top);
+
+    top: 202px;
+    left: -49px;
+}
+#two3d{
+    position: absolute;
+    background-color: rgb(225, 24, 24);
+    width: 46px;
+    height: 20px;
+    clip-path: ellipse(56% 80% at top);
+
+    top: 202px;
+    left: 46px;
+}
+#three3d{
+    position: absolute;
+    background-color: rgb(225, 24, 24);
+    width: 46px;
+    height: 20px;
+    clip-path: ellipse(56% 80% at top);
+
+    top: 202px;
+    left: 146px;
+}
+#minus3d{
+    position: absolute;
+    background-color: rgb(65, 64, 81);
+    width: 46px;
+    height: 20px;
+    clip-path: ellipse(56% 80% at top);
+
+    top: 202px;
+    left: 232px;
+}
+#zero3d{
+    position: absolute;
+    background-color: rgb(225, 24, 24);
+    width: 48px;
+    height: 20px;
+    clip-path: ellipse(56% 80% at top);
+
+    top: 257px;
+    left: -58px;
+}
+#decimal3d{
+    position: absolute;
+    background-color: rgb(225, 24, 24);
+    width: 48px;
+    height: 20px;
+    clip-path: ellipse(56% 80% at top);
+
+    top: 257px;
+    left: 42px;
+}
+#equals3d{
+    position: absolute;
+    background-color: rgb(225, 24, 24);
+    width: 48px;
+    height: 20px;
+    clip-path: ellipse(56% 80% at top);
+
+    top: 257px;
+    left: 151px;
+}
+#plus3d{
+    position: absolute;
+    background-color: rgb(65, 64, 81);
+    width: 48px;
+    height: 20px;
+    clip-path: ellipse(56% 80% at top);
+
+    top: 257px;
+    left: 241px;
+}
+#label{
+    position: absolute;
+   
+  font-weight: 600;
+  font-style: normal;
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(5, 50px);
+ margin-top: -300px;
+ z-index: 10;
+ left: 30px;
+}
+#left{
+    position: absolute;
+    left: -29px;
+    top: 15px;
+}
+#right{
+    position: absolute;
+    left: 49px;
+    top: 15px;
+}
+#percent{
+    position: absolute;
+    left: 113px;
+    top: 15px;
+}
+#C{
+    position: absolute;
+    left: 185px;
+    top: 15px;
+    color: white;
+}
+#seven{
+    position: absolute;
+    left: -36px;
+    top: 73px;
+}
+#eight{
+    position: absolute;
+    left: 42px;
+    top: 73px;
+}
+#nine{
+    position: absolute;
+    left: 124px;
+    top: 73px;
+}
+#mult{
+    position: absolute;
+    left: 200px;
+    top: 70px;
+    font-size: 20px;
+    color: lightgray;
+}
+#four{
+    position: absolute;
+    left: -45px;
+    top: 128px;
+}
+#five{
+    position: absolute;
+    left: 39px;
+    top: 128px;
+}
+#six{
+    position: absolute;
+    left: 130px;
+    top: 128px;
+}
+#divide{
+    position: absolute;
+    left: 211px;
+    top: 121px;  
+    font-size: 20px;
+    color: lightgray;
+}
+#one{
+    position: absolute;
+    left: -60px;
+    top: 183px;
+}
+#two{
+    position: absolute;
+    left: 34px;
+    top: 183px;
+}
+#three{
+    position: absolute;
+    left: 135px;
+    top: 183px;
+}
+#minus{
+    position: absolute;
+    left: 222px;
+    top: 175px;
+    font-size: 20px;
+    color: lightgray;
+}
+#zero{
+    position: absolute;
+    left: -68px;
+    top: 240px;
+}
+#decimal{
+    position: absolute;
+    left: 33px;
+    top: 217px;
+    font-size: 25px;
+}
+#equals{
+    position: absolute;
+    left: 139px;
+    top: 224px;
+    font-size: 25px;
+}
+#plus{
+    position: absolute;
+    left: 229px;
+    top: 225px;
+    font-size: 25px;
+    color: lightgray;
+}
+
+.prompt{
+    color: black;
+    font-weight: 600;
+}
+
+
+label{
+    font-size: 27px;
+    font-weight: 800;
+}
+input{
+margin-left: 10px;
+}
+
+h1{
+    color:white;
+
+}
+#button{
+   position: absolute;
+   top:610px;
+   
+}
+#pointer{
+  margin-top: -640px;
+  margin-right: 295px;
+    width: 50px;
+   
+    z-index: 10;
+     animation-name: numSelect;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 5s; 
+} 
+#select{
+width: 50px;
+height: 30px;
+background-color: rgb(225, 24, 24);
+border-radius: 50%;
+margin-top: -550px;
+margin-right: 295px;
+z-index: 9;
+animation-name: selection;
+    animation-timing-function: step-end;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    
+}
+.menu{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    background-color: rgba(200, 200, 200, 0.789);
+border-radius: 3%;
+z-index: 10;
+
+}
+#screen{
+    text-align: right;
+}
+#result{
+margin-top: -13px;
+}
+form > button {
+display: flex;
+margin-top: -342px;
+margin-left: 178px;
+}
+
+@keyframes numSelect {
+    0%{
+        transform: translateY(0px) translateX(0px);
+    }
+    24%{
+        transform: translateY(-180px) translateX(35px); 
+        
+    } 
+    42%{
+        transform: translateY(-180px) translateX(200px); 
+    }
+    54%{
+        transform: translateY(-120px) translateX(100px); 
+    }
+    66%{
+        transform: translateY(-120px) translateX(200px); 
+    }
+    72%{
+        transform: translateY(-70px) translateX(200px); 
+    }
+    85%{
+        transform: translateY(-70px) translateX(110px);  
+    }
+    100%{
+        transform: translateY(0px) translateX(0px);  
+    }
+}
+@keyframes selection {
+    0%{
+        transform: translateY(0px) translateX(0px);
+    }
+    6%{
+        transform: translateY(-55px) translateX(6px); 
+       
+    }
+    12%{
+        transform: translateY(-110px) translateX(20px); 
+        width: 45px;
+    }
+    24%{
+        transform: translateY(-165px) translateX(30px); 
+        
+    } 
+    30%{
+        transform: translateY(-165px) translateX(110px); 
+        
+    } 
+    42%{
+        transform: translateY(-165px) translateX(190px); 
+    }
+    54%{
+        transform: translateY(-110px) translateX(105px); 
+    }
+    66%{
+        transform: translateY(-110px) translateX(195px); 
+    }
+    72%{
+        transform: translateY(-55px) translateX(201px); 
+        width: 47px;
+    }
+    85%{
+        transform: translateY(-55px) translateX(101px);  
+    }
+    100%{
+        transform: translateY(0px) translateX(0px);  
+    }
+}
+
+@keyframes operSelect {
+    0%{
+        transform: translateY(-15px) translateX(290px);
+    } 
+    16.6%{
+        transform: translateY(-68px) translateX(283px);
+    }
+    33.3%{
+        transform: translateY(-120px) translateX(273px);
+    }
+    50%{
+        transform: translateY(-175px) translateX(260px);
+    }
+    66.6%{
+        transform: translateY(-120px) translateX(273px);
+    }
+    83.3%{
+        transform: translateY(-68px) translateX(283px);
+    }
+    100%{
+        transform: translateY(-15px) translateX(290px);
+    }
+  
+}
+@keyframes operSelection {
+    0%{
+        transform: translateY(-1px) translateX(298px);
+        background-color: rgb(65, 64, 81);
+    } 
+    16.6%{
+        transform: translateY(-56px) translateX(287px);
+        background-color: rgb(65, 64, 81);
+    }
+    33.3%{
+        transform: translateY(-112px) translateX(275px);
+        background-color: rgb(65, 64, 81);
+        width: 47px;
+    }
+    50%{
+        transform: translateY(-168px) translateX(264px);
+        background-color: rgb(65, 64, 81);
+        width: 45px;
+    }
+    66.6%{
+        transform: translateY(-112px) translateX(275px);
+        background-color: rgb(65, 64, 81);
+        width: 47px;
+    }
+    83.3%{
+        transform: translateY(-56px) translateX(287px);
+        background-color: rgb(65, 64, 81);
+        width: 50px;
+    }
+    100%{
+        transform: translateY(-1px) translateX(298px);
+        background-color: rgb(65, 64, 81);
+    }
+} 

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>OneButtonCalculator</title>
+</head>
+<body>
+    <h1>One Button Calculator</h1>
+    <div id="bpp"><div id="bigPanel"></div>
+    <div id="bottomPanel">
+        
+    </div>
+    </div> 
+    <div id="spp">
+        <div id="screenPanel">
+            <div id="bezel">
+                <div id="screen">
+                    <p id="display"></p>
+                    <p id="result"></p>
+            </div>
+            
+                
+            </div>
+        </div>
+        
+    </div>
+    
+    <div id="bp">
+        
+         <div id="buttons"> 
+            <div id="left3d"></div>
+            <div id="right3d"></div>
+            <div id="percent3d"></div>
+            <div id="c3d"></div>
+            <div id="seven3d"></div>
+            <div id="eight3d"></div>
+            <div id="nine3d"></div>
+            <div id="divde3d"></div>
+            <div id="four3d"></div>
+            <div id="five3d"></div>
+            <div id="six3d"></div>
+            <div id="mult3d"></div>
+            <div id="one3d"></div>
+            <div id="two3d"></div>
+            <div id="three3d"></div>
+            <div id="minus3d"></div>
+            <div id="zero3d"></div>
+            <div id="decimal3d"></div>
+            <div id="equals3d"></div>
+            <div id="plus3d"></div>
+        <div id="numbers">
+            <div class="number left">
+              
+            </div> 
+            <div class="number right">
+            </div> 
+            <div class="number percent">
+            </div> 
+            <div class="number C">
+            </div> 
+            <div class="number seven">
+            </div> 
+            <div class="number eight">
+            </div> 
+            <div class="number nine">
+            </div> 
+            <div class="number divde">
+            </div> 
+            <div class="number four">
+            </div> 
+            <div class="number five">
+            </div> 
+            <div class="number six">
+            </div> 
+            <div class="number mult">
+            </div> 
+            <div class="number one">
+            </div> 
+            <div class="number two">
+            </div> 
+            <div class="number three">
+            </div> 
+            <div class="number minus">
+            </div> 
+            <div class="number zero">
+            </div> 
+            <div class="number decimal">
+            </div> 
+            <div class="number equals">
+            </div> 
+            <div class="number plus">
+            </div> 
+            
+         
+           
+        </div>
+        <div id="label">
+            <p id="left">(</p>   
+            <p id="right">)</p>   
+            <p id="percent">%</p>   
+            <p id="C">C</p>   
+            <p id="seven">7</p>   
+            <p id="eight">8</p>   
+            <p id="nine">9</p>   
+            <p id="mult">*</p>   
+            <p id="four">4</p>   
+            <p id="five">5</p>   
+            <p id="six">6</p>   
+            <p id="divide">/</p>   
+            <p id="one">1</p>   
+            <p id="two">2</p>   
+            <p id="three">3</p>   
+            <p id="minus">-</p>   
+            <p id="zero">0</p>   
+            <p id="decimal">.</p>   
+            <p id="equals">=</p>   
+            <p id="plus">+</p>   
+           </div>
+    </div>
+    
+    
+    </div>
+    <div class="menu" id="firstMenu" >
+    <form id="firstMenuF" >
+        <p class="prompt">How many digits does your first number have before and after the decimal</p>
+        <input type="number" id="firstNum" name="firstNum" min="0" placeholder="How digits before the decimal" required>
+        
+        <label>. <input type="number" id="firstNumDecDigs" name="firstNumDecDigs" min="0" placeholder="How digits after the decimal" required></label>
+    </form>    
+    </div>
+    <div class="menu" id="secMenu" >
+        <form id="secMenuF" novalidate>
+            <p class="prompt">How many digits does your second number have before and after the decimal?</p>
+            <label>
+                <input type="number" id="secNum" min="0" required placeholder="How digits before the decimal" />
+                .
+                <input type="number" id="secNumDecDigs" min="0" required placeholder="How digits after the decimal" />
+            </label>
+            
+        </form>
+        
+    </div> 
+
+     <img id="pointer" src="./pointer.png" >
+        <div id="select"></div> 
+    
+    <button id="button">Start</button>
+    <script src="script.js"></script>
+</body>
+</html>
